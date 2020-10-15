@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/waltz-controls/magix-python-client.svg?branch=main)](https://travis-ci.org/waltz-controls/magix-python-client)
+
 # magix-python-client
 
 Python client implementation for Magix
