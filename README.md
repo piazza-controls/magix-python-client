@@ -10,7 +10,7 @@ Python client implementation for Magix
 pip install magix_client
 ```
 
-```
+```python
 magix_host = 'http://magix:8080'
 
 #create instance
