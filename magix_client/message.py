@@ -14,6 +14,7 @@ class Message:
     """Waltz-Controls Message as defined in RFC-1
     """
 
+    # TODO payload hook
     def __init__(self, id, origin, parentId=None, target=None, user=None, action=None, payload=None):
         self.id = id
         self.origin = origin
