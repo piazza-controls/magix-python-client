@@ -1,9 +1,9 @@
 import json
 import requests
-import rx
-import sseclient
 
+import rx
 import rx.operators as ops
+import sseclient
 from rx.scheduler import NewThreadScheduler
 
 scheduler = NewThreadScheduler()
@@ -30,10 +30,11 @@ class MagixHttpClient:
         )
         self.stream.connect()
 
-    def broadcast(self, message):
+    def broadcast(self, message, channel='message'):
         encoded_message = json.dumps(message).encode('utf-8')
         # TODO fire and forget
-        requests.post(self.magix_broadcast, data=encoded_message, headers={'Content-Type': 'application/json'})
+        requests.post(self.magix_broadcast, data=encoded_message, headers={'Content-Type': 'application/json'},
+                      params={'channel': channel})
         pass
 
     def observe(self, channel='message'):
