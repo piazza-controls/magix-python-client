@@ -2,7 +2,7 @@
 
 # magix-python-client
 
-Python client implementation for Magix
+Python client implementation for Magix, see [RFC-2](https://github.com/waltz-controls/rfc/tree/master/2)
 
 ## Usage
 

@@ -1,12 +1,16 @@
-import requests, json, sseclient, rx
-from rx.scheduler import NewThreadScheduler
+import json
+import requests
+import rx
+import sseclient
+
 import rx.operators as ops
+from rx.scheduler import NewThreadScheduler
 
 scheduler = NewThreadScheduler()
 
 
 class MagixHttpClient:
-    """Waltz-Controls Magix client based on HTTP transport
+    """Waltz-Controls Magix client based on HTTP transport. This client's API is described in Waltz-Controls RFC-2
 
     Example:
         >>> client = MagixHttpClient(magix_host)#http://localhost:8080 by default
