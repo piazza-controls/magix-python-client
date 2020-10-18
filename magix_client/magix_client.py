@@ -1,6 +1,6 @@
 import json
-import requests
 
+import requests
 import rx
 import rx.operators as ops
 import sseclient
@@ -31,7 +31,8 @@ class MagixHttpClient:
         self.stream.connect()
 
     def broadcast(self, message, channel='message'):
-        encoded_message = json.dumps(message).encode('utf-8')
+        # TODO skip Nones
+        encoded_message = json.dumps(message, default=(lambda o: o.__dict__)).encode('utf-8')
         # TODO fire and forget
         requests.post(self.magix_broadcast, data=encoded_message, headers={'Content-Type': 'application/json'},
                       params={'channel': channel})

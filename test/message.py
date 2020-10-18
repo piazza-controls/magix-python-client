@@ -1,3 +1,4 @@
+import json
 import unittest
 
 from magix_client import Message
@@ -25,6 +26,11 @@ class TestMessageFrom(unittest.TestCase):
         assert msg.id == 12345
         assert msg.origin == 'test'
         assert msg.payload.foo == 'bar'
+        pass
+
+    def test_to_json(self):
+        msg = Message(id=1, origin='test')
+        print(json.dumps(msg, default=(lambda o: o.__dict__)))
         pass
 
 
