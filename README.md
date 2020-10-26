@@ -1,4 +1,5 @@
 [![Build Status](https://travis-ci.org/waltz-controls/magix-python-client.svg?branch=main)](https://travis-ci.org/waltz-controls/magix-python-client)
+[![PyPI version](https://badge.fury.io/py/magix-client.svg)](https://badge.fury.io/py/magix-client)
 
 # magix-python-client
 
