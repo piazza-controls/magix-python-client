@@ -6,13 +6,12 @@ class Message:
     """
 
     # TODO payload hook
-    def __init__(self, id, origin, parentId=None, target=None, user=None, action=None, payload=None):
+    def __init__(self, id, origin, parentId = None, target = None, user = None, payload = None):
         self.id = id
         self.origin = origin
         self.parentId = parentId
         self.target = target
         self.user = user
-        self.action = action
         self.payload = payload
 
     @classmethod
